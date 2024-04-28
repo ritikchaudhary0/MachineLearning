@@ -169,3 +169,6 @@ for row in moma:
     remove_bad_char = strip_characters(date)
     convert_dates_into_int = process_date(remove_bad_char)
     row[6] = convert_dates_into_int
+
+
+### Now we have to analysis the dataset.............................................................................................................................
