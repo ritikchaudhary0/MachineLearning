@@ -172,3 +172,44 @@ for row in moma:
 
 
 ### Now we have to analysis the dataset.............................................................................................................................
+"""
+Even though we have cleaned the data, we have to convert these values to numeric types so we can analyze them. 
+Some of the rows have missing values, so we'll need to handle those as well.
+
+We convert both the birth and death date to numeric types. And also conver the Date column into numeric. And using this we avoided the empty string.
+"""
+from csv import reader
+
+# Read the `artworks_clean.csv` file
+opened_file = open('artworks_clean.csv')
+read_file = reader(opened_file)
+moma = list(read_file)
+moma = moma[1:]
+
+# Convert the birthdate values
+for row in moma:
+    birth_date = row[3]
+    if birth_date != "":
+        birth_date = int(birth_date)
+    row[3] = birth_date
+    
+# Convert the death date values
+for row in moma:
+    death_date = row[4]
+    if death_date != "":
+        death_date = int(death_date)
+    row[4] = death_date
+
+# Convert data column in numeric value
+for row in moma:
+    date = row[6]
+    if date != "":
+        date = int(date)
+    row[6] = date
+
+
+### Calculating Artist Ages----------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+ we're going to work on calculating the ages at which age artists created their works of art.
+
+ Those age less than 20 or negativ, we'll take care of these by categorizing artists younger than 20 as "Unknown"
