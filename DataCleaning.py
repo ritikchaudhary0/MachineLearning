@@ -213,3 +213,28 @@ for row in moma:
  we're going to work on calculating the ages at which age artists created their works of art.
 
  Those age less than 20 or negativ, we'll take care of these by categorizing artists younger than 20 as "Unknown"
+"""
+
+ages = []
+for row in moma:
+    date = row[6]
+    birth = row[3]
+    
+    #print(birth)
+    
+    if type(birth) == int:
+        age = date - birth
+        #print(age)
+    elif type(birth) != int:
+        age = 0
+    ages.append(age)
+    
+final_ages = []
+for check_age in ages:
+    if check_age > 20:
+        final_age = check_age
+    else:
+        final_age = 'Unknown'
+    final_ages.append(final_age)
+    
+#print(ages)
