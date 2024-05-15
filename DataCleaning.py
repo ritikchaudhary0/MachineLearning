@@ -282,4 +282,16 @@ print(decade_frequency)
 
 #Output {'30s': 4722, '60s': 1357, '70s': 559, '40s': 4081, '50s': 2434, '20s': 1856, 'Unknown': 1093, '90s': 253, '80s': 364, '100s': 3, '110s': 3}
 
-# 
+# Inserting Variables into Strings---------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+Most of what i have did so far is about cleaning and interpreting data stored in string form.
+Another common application of strings is displaying output in an easy-to-read form.
+
+The {str.format()} method is a powerful tool that helps us write easy-to-read code while combining strings with other variables.
+output = "{}'s favorite number is {}".format("Kylie", 8)
+output = "{0}'s favorite number is {1}, {1} is {0}'s favorite number".format("Kylie", 8)
+template = "{name}'s favorite number is {num}, {num} is {name}'s favorite number"
+   output = template.format(name="Kylie", num="8")
+"""
+
+
