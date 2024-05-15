@@ -229,7 +229,7 @@ for row in moma:
         age = 0
     ages.append(age)
     
-final_ages = []
+final_ages = []""
 for check_age in ages:
     if check_age > 20:
         final_age = check_age
@@ -238,3 +238,48 @@ for check_age in ages:
     final_ages.append(final_age)
     
 #print(ages)
+
+
+# Converting Ages to Decades-----------------------------------------------------------------------------------------------------------------------------------------------
+"""
+We now have a list — ages — containing the artist ages when they created their artwork. Everyone have unique ages.
+so we can calculate the decade during which the artist created each work. For instance, if we calculate that the artist was 24, we'll record that as the artist being in their 20s.
+24 will become 2.
+**Python stores strings in a list-like structure, which lets us slice them in the same way we would a list**
+
+Let's take our final_ages list, loop over it, and perform the operation above to convert it into a list of decades.
+"""
+# The final_ages variable is available
+# From the above code
+decades = []
+for age in final_ages:
+    if age == "Unknown":
+        decade = age
+    else:
+        decade = str(age)
+        decade = decade[:-1] + '0s'
+    
+    decades.append(decade)
+
+
+# Summarizing the Decade Data--------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+On the above code, we did the following:
+---Calculated the age of the artists when they created their artwork.
+---Simplified those ages to a list of "decades" so there were fewer unique values.
+
+Now we wiil calculate that how much time the decades value occur. We did this using Dictonary, we can use sorting but in python we have dictionary feature, so we will use dictonary(it have the key:value feature).
+"""
+
+decade_frequency = {}
+for item in decades:
+    if item not in decade_frequency:
+        decade_frequency[item] = 1
+    else:
+        decade_frequency[item] += 1
+        
+print(decade_frequency)
+
+#Output {'30s': 4722, '60s': 1357, '70s': 559, '40s': 4081, '50s': 2434, '20s': 1856, 'Unknown': 1093, '90s': 253, '80s': 364, '100s': 3, '110s': 3}
+
+# 
