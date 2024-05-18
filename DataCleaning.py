@@ -290,8 +290,31 @@ Another common application of strings is displaying output in an easy-to-read fo
 The {str.format()} method is a powerful tool that helps us write easy-to-read code while combining strings with other variables.
 output = "{}'s favorite number is {}".format("Kylie", 8)
 output = "{0}'s favorite number is {1}, {1} is {0}'s favorite number".format("Kylie", 8)
+
 template = "{name}'s favorite number is {num}, {num} is {name}'s favorite number"
    output = template.format(name="Kylie", num="8")
 """
 
+
+
+# Creating an Artist Frequency Table--------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+we are going to create a frequency table that counts how many works of art are in our dataset for each artist.
+"""
+artist_freq = {}
+for row in moma: #it gte the row
+    artist = row[1] #in this we are taking one particular collum in a row
+    #print(artist)
+    if artist not in artist_freq:
+        artist_freq[artist] = 1
+    else:
+        artist_freq[artist] += 1
+
+
+# Creating an Artist Summary Function-------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+the final part of our task will be creating a function that displays information for a specific artist.
+Our function will take a single argument — the name of an artist — and display a formatted sentence about that artist. 
+Like- < There are 170 art work my mark sus in the dataset>  , something like that:)
+"""
 
