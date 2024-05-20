@@ -261,6 +261,10 @@ for age in final_ages:
     
     decades.append(decade)
 
+print(decades)
+
+Output- ['30s', '60s', '30s', '70s', '40s', '30s', '60s', '50s', '30s', 'Unknown', '50s', '40s', '20s', '30s', '40s'....................]
+
 
 # Summarizing the Decade Data--------------------------------------------------------------------------------------------------------------------------------------------------------
 """
@@ -309,6 +313,9 @@ for row in moma: #it gte the row
         artist_freq[artist] = 1
     else:
         artist_freq[artist] += 1
+print(artist_freq)
+
+Output- {'Sarah Charlesworth': 1, 'Pablo Palazuelo': 4, 'Maurice Denis': 71, 'Aristide Maillol': 77, 'Eugène Atget': 705, 'Antonio Frasconi': 41, 'Garry Winogrand': 47, 'Diane Victor': 4,....}
 
 
 # Creating an Artist Summary Function-------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -317,4 +324,19 @@ the final part of our task will be creating a function that displays information
 Our function will take a single argument — the name of an artist — and display a formatted sentence about that artist. 
 Like- < There are 170 art work my mark sus in the dataset>  , something like that:)
 """
+def artist_summary(name_artist):
+    
+    if name_artist in artist_freq:
+        artist_name = name_artist
+        artwork = artist_freq[name_artist]
+        
+        template = "There are {artworks} artworks by {artist_name} in the dataset"
+        output = template.format(artworks = artwork, artist_name = artist_name)
+        return output
+    else:
+        pass
+
+result = artist_summary("Henri Matisse")
+print(result)
+
 
