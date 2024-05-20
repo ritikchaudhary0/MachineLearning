@@ -322,7 +322,8 @@ Output- {'Sarah Charlesworth': 1, 'Pablo Palazuelo': 4, 'Maurice Denis': 71, 'Ar
 """
 the final part of our task will be creating a function that displays information for a specific artist.
 Our function will take a single argument — the name of an artist — and display a formatted sentence about that artist. 
-Like- < There are 170 art work my mark sus in the dataset>  , something like that:)
+Like: <There are 170 art work my mark sus in the dataset>  , something like that:)
+
 """
 def artist_summary(name_artist):
     
@@ -338,5 +339,10 @@ def artist_summary(name_artist):
 
 result = artist_summary("Henri Matisse")
 print(result)
+
+Output- There are 129 artworks by Henri Matisse in the dataset
+
+# Formatting Numbers Inside Strings---------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
 
 
