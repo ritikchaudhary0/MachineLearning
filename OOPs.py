@@ -27,4 +27,59 @@ print(type(my_instance))
 """
 In order to make our class do something, we need to define some methods. Methods allow objects to perform actions.
 You can think of methods like special functions that belong to a particular class. This is why we call the replace method str.replace()— because the method belongs to the str class.
+"""
+class MyClass:
+    def first_method():
+        return "This is my first method"
+    
+my_instance = MyClass()
+
+#  Understanding "self" -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class MyClass:
+    
+    def first_method(self):
+        return "This is my first method"
+    
+my_instance = MyClass()
+result = my_instance.first_method()
+print(result)
+
+Output- "This is my first method"
+
+# Creating a Method that Accepts an Argument-------------------------------------------------------------------------------------------------------------------------------------------------
+
+class MyClass:
+    
+    def first_method(self):
+        return "This is my first method"
+    
+    # Add method here
+    def return_list(self, input_list):
+        self.input_list = input_list
+        return self.input_list
+    
+my_instance = MyClass()
+result = my_instance.return_list([1,2,3])
+print(result)
+
+Output- [1, 2, 3]
+"""
+One more we have to write this above code. But my this down way method work with ony dataquest platform
+"""
+
+class MyClass:
+    
+    def first_method(self):
+        return "This is my first method"
+    
+    # Add method here
+    def return_list(self, input_list):
+        return input_list
+    
+my_instance = MyClass()
+result = my_instance.return_list([1,2,3])
+print(result)
+
+Output - [1, 2, 3]
 
