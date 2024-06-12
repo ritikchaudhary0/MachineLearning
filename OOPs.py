@@ -116,3 +116,36 @@ Output- [1, 2, 3, 4, 5]
 [1, 2, 3, 4, 5, 6]
 
 # Creating and Updating an Attribute---------------------------------------------------------------------------------------------------------------------------------------------
+"""
+What we have done so far--
+
+We've created a MyList class that stores a list at the point of instantiation using the init constructor.
+We stored that list inside an attribute of MyList called data.
+We've created a method — MyList.append() — that mimics the behavior of list.append().
+"""
+
+globals().clear()
+class MyList:
+    pass
+class MyList:
+
+    def __init__(self, initial_data):
+        self.data = initial_data
+        # Calculate the initial length
+        self.length = 0
+        for item in self.data:  #This is there way of callculating the length .
+            self.length += 1
+
+    def append(self, new_item):
+        self.data = self.data + [new_item]
+        # Update the length here
+        self.length = len(self.data)   # This is my way of callculating the length using len() function :)
+        
+my_list = MyList([1,1,2,3,5])
+print(my_list.length)
+
+my_list.append(8)
+print(my_list.length)
+
+Output:- 5
+         6
