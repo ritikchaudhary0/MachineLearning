@@ -94,4 +94,25 @@ print(my_list.data)
 
 Output- [1, 2, 3, 4, 5]
 
+# Creating an Append Method----------------------------------------------------------------------------------------------------------------------------------------
 
+class MyList:
+
+    def __init__(self, initial_data):
+        self.data = initial_data
+        
+    # Add method here
+    def append(self,new_item):
+        self.data = self.data + [new_item]  # if i didn't put list sign to the new_item variale then python will treat it as a int argument. So when i append without list sign it will give me error because list
+                                            # and int can't concatanate. means i will get type error. so that's why i put the list sign in the function itself to avoid this error.
+
+my_list = MyList([1, 2, 3, 4, 5])
+print(my_list.data)
+
+my_list.append(6)
+print(my_list.data)
+
+Output- [1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5, 6]
+
+# Creating and Updating an Attribute---------------------------------------------------------------------------------------------------------------------------------------------
